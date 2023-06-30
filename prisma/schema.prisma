@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Collection {
+  id String @id @default(uuid())
+  title String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  list Item[]
+}
+
+model Item {
+  id String @id @default(uuid())
+  name String @unique
+  Collection Collection? @relation(fields: [collectionId], references: [id])
+  collectionId String?
+}
+
+// CREATE DATABASE
+// $psql
+// create database db_name;
+
+// CONNECT TO DATABASE 
+// $psql -h localhost -p 5432 -U will db_name
+
+// CREATE PRISMA CLIENT
+// $npx prisma generate
+
+// RUN DATABASE MIGRATION
+// $npx prisma migrate dev --name init
+
+// SEED DB
+// $npx prisma db seed
