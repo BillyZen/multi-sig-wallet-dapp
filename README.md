@@ -1,1 +1,1 @@
-A web app template using Node, React.js, Next.js, Typescript, Prisma & PostgreSQL to be used when starting any new web app.
+A full stack NODE web application template written predominantly in Typescript, using Next.js, React.js, Storybook, Prisma & PostgreSQL.
