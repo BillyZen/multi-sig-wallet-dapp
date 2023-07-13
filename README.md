@@ -1,1 +1,1 @@
-A full stack NODE web application template written predominantly in Typescript, using Next.js, React.js, Storybook, Prisma & PostgreSQL.
+A dApp built around the ability to deploy and interact with Multi. Signature Wallet Smart Contracts on the Ethereum Blockchain. This dApp allows users to set up a multi. sig. with certain other wallets as owners who must sign off any transactions passing into the multi. sig. wallet.
