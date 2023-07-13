@@ -14,14 +14,6 @@ app
       app.render(req, res, "/");
     });
 
-    server.get("/new", (req, res) => {
-      app.render(req, res, "/new");
-    });
-
-    server.get("/newer", (req, res) => {
-      app.render(req, res, "/newer");
-    });
-
     server.get("*", (req, res) => {
       return handle(req, res);
     });
